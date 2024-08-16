@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <script src="https://kit.fontawesome.com/0db69a7491.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <span class="logo">
+                 <a href="#">Ndupurpose</a>
+            </span>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>FrontEnd Developer</p>
+            <h1>Hi! I'm <br>Ndubuisi <span>Nwiyi</span></h1>
+        </div>
+    </div> 
+</div>
+<!------about ------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="phonebackground.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-text">About Me</h1>
+                <p>I'm a developer with one year of hands-on experience in creating responsive and 
+                    visualling appealing websites and Apps.Proficient in HTML,CSS, and JavaScript. 
+                    I'm adept at transforming design mockups into functional web interfaces.
+                    With a keen eye for continuous learning and delivering user-friendly and efficient web solutions.</p>
+
+                    <div class="tab-text">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>FrontEnd Developer</span><br>Web Design/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024-Current</span><br>Team member of </li>
+                            <li><span>2024-</span><br>Internship at </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>PMP</li>
+                            <li><span>2002</span><br>Civil Engineering</li>
+                            
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------services-------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-text">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>This entails creating and building a website's 
+                    visual and interactive elements,such as layout,typography,
+                    colors,images,and functionality, to produce a user-friendly,
+                    aesthetically pleasing, and effective online presence.</p>
+                    <a href="#">Learn more</a>
+                
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>This entails creating and building the
+                    visual and interactive elements of a mobile or desktop application,
+                    such as user interface(UI),user experience(UX),layout,graphics,and
+                    functionality,to produce an intuitive,engaging, and user-friendly digial product.</p>
+                    <a href="#">Learn more</a>
+               
+            </div>
+            <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>UI/UX Design</h2>
+                <p>This entails creating and building the
+                    visual and interactive elements of a mobile or desktop application,
+                    such as user interface(UI),user experience(UX),layout,graphics,and
+                    functionality,to produce an intuitive,engaging, and user-friendly digial product.</p>
+                    <a href="#">Learn more</a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------portfolio-------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-text">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work 1.jpg">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app connects you to the talented people around the world
+                        Download it from play store.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-2.jpg">
+                <div class="layer">
+                    <h3>flight booking App</h3>
+                    <p>The app connects you to the talented people around the world
+                        Download it from play store.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work 3.jpg">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you to the talented people around the world
+                        Download it from play store.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
